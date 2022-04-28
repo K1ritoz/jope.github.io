@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Descubra o pc ideal para seu orçamento.">
+        <meta name="author" content="Jope Inc.">
+        <link href="assets/css/style.css" rel="stylesheet">
+        <title>Jope • Kit de pc's</title>
+        <link rel="icon" href="assets/img/logo.png" type="image/png" sizes="16x16">
+    </head>
+    <body>
+        <section>
+            <div class="circle"></div>
+            <header>
+                <a href="#"><img src="assets/img/logo.png" class="logo"></a>
+                <div class="toggle" onclick="toggleMenu();"></div>
+                <ul class="navigation">
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#">Kit's</a></li>
+                    <li><a href="#">Contate-nos</a></li>
+                </ul>
+            </header>
+            <div class="content">
+                <div class="textBox">
+                    <h2>Não é apenas ver<br>Mas também <span>conhecer</span></h2>
+                    <p>A Jope é focada em lhe ajudar a escolher o melhor pc para você!</p>
+                    <a href="#">Ver Mais</a>
+                </div>
+                <div class="imgBox">
+                    <img src="assets/img/img1.jpg" class="motherboard">
+                </div>
+            </div>
+            <ul class="thumb">
+                <li><img src="assets/img/thumb1.jpg" onclick="imgSlider('./assets/img/img1.jpg'); changeCircleColor('#29c3f7')"></li>
+                <li><img src="assets/img/thumb2.jpg" onclick="imgSlider('./assets/img/img2.jpg'); changeCircleColor('#29c3f7')"></li>
+                <li><img src="assets/img/thumb3.jpg" onclick="imgSlider('./assets/img/img3.jpg'); changeCircleColor('#29c3f7')"></li>
+            </ul>
+            <ul class="sci">
+                <li><a href="#"><img src="assets/img/facebook.png"></a>
+                <li><a href="#"><img src="assets/img/tiktok.png"></a>
+                <li><a href="#"><img src="assets/img/instagram.png"></a>
+            </ul>
+        </section>
+        <script type="text/javascript">
+            function imgSlider(anything) {
+                document.querySelector('.motherboard').src = anything;
+            }
+
+            function changeCircleColor(color) {
+                const circle = document.querySelector('.circle');
+                circle.style.background = color;
+            }
+
+            function toggleMenu() {
+                var menuToggle = document.querySelector('.toggle');
+                var navigation = document.querySelector('.navigation')
+                menuToggle.classList.toggle('active')
+                navigation.classList.toggle('active')
+            }
+        </script>
+    </body>
+</html>
